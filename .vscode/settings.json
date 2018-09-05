@@ -1,0 +1,12 @@
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "ipv4.rosScript",
+			    "settings": {
+                "foreground": "#cc8b00"
+                }
+            }
+        ]
+    }
+}
