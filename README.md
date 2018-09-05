@@ -7,11 +7,16 @@
 
 ## Snippets
 
-![Snippets](./images/example.gif)
+![Snippets](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/raw/master/images/example.gif)
 
 ## Syntax Highlighting
 
-![Syntax](./images/example.png)
+![Syntax](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/raw/master/images/example.png)
 
-## Release Notes 2018.8.0
+## Release Notes
+
+### 2018.8.1
+- Fix some syntax highlighting.
+
+### 2018.8.0
 - First release.

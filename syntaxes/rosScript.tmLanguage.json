@@ -1,0 +1,232 @@
+{
+  "name": "rosScript",
+  "scopeName": "source.rsc",
+  "fileTypes": ["rsc"],
+  "patterns": [
+    {
+      "match": "\\b(ipsec-esp|ipsec-ah|idpr-cmtp|iso-tp4|xns-idp|udp-lite|ip-encap|icmp|igmp|ggp|st|tcp|egp|pup|udp|hmp|rdp|dccp|xtp|ddp|rsvp|gre|rspf|vmtp|ospf|ipip|etherip|encap|pim|vrrp|l2tp|sctp)\\b",
+      "name": "variable.other.rosScript"
+    },
+    {
+      "match": "(dns|https|http|smb)",
+      "name": "keyword.other.rosScript"
+    },
+    {
+      "match": "qwerty",
+      "name": "ipv4.rosScript"
+    },
+    {
+      "match": "\\b(system|package|update)\\b",
+      "name": "keyword.other.rosScript"
+    },
+    {
+      "match": "(?<=\\=)\\b(\\S)*\\b",
+      "name": "support.type.rosScript"
+    },
+    {
+      "match": "\\b(ftp|h323|irc|pptp|sip|tftp|updplite|api-ssl|api|ssh|telnet|winbox|www-ssl|www|reboot|read|write|test|sniff|sensitive|romon)\\b",
+      "name": "variable.other.rosScript"
+    },
+    {
+      "match": "\\b(up-script|netwatch|watchdog-timer|owner|ntp|on-event|down-script|src-and-dst-addresses|dst-limit|limit|to-ports|silent-boot|routerboard|allow-remote-requests|pptp-server|authentication-types|in-filter|security-profiles|multicast-helper|tx-power|wps-mode|user-manager|access|time-zone-autodetect|time-zone-name)\\b",
+      "name": "keyword.other.rosScript"
+    },
+    {
+      "match": "\\b(own-routers|own-users|own-profiles|own-limits|config-payment-gw|always-broadcast|cache-max-ttl|discover-interface-list|in-interface)\\b",
+      "name": "keyword.other.rosScript"
+    },
+    {
+      "match": "(?<=(\\=|\n|\\s|\\,))(input|output|forward|srcnat|dstnat|untracked)",
+      "name": "support.type.rosScript"
+    },
+    {
+      "match": "(?<=\\=)(accept|add-dst-to-address-list|add-src-to-address-list|drop|fasttrack-connection|jump|log|passthrough|reject|return|tarpit)",
+      "name": "support.type.rosScript"
+    },
+    {
+      "match": "(?<=\\=)(none-dynamic|none-static)",
+      "name": "support.type.rosScript"
+    },
+    {
+      "match": "[0-9]{1,3}Mbps|(2|5)ghz",
+      "name": "support.type.rosScript"
+    },
+    {
+      "match": "([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})(\\s|-([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}))",
+      "name": "support.type.rosScript"
+    },
+    {
+      "match": "([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}/[0-9]{1,2})(\\s|\\-([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}/[0-9]{1,2}))",
+      "name": "support.type.rosScript"
+    },
+    {
+      "match": "([0-9A-F]{2}[:-]){5}([0-9A-F]{2})(\\s)",
+      "name": "support.type.rosScript"
+    },
+    {
+      "match": "\\b(if|else|for|foreach|do|while)(?=\\s|\\{|\\=|\\[|\\()",
+      "name": "keyword.control.rosScript"
+    },
+    {
+      "match": "\\b(and|or|not|in|&&|\\!|\\|\\|)\\b",
+      "name": "keyword.operator.logical"
+    },
+    {
+      "match": "~|\\||\\^|&|<<|>>",
+      "name": "keyword.operator.logical"
+    },
+    {
+      "match": "\\b(detail|error|file|info|led|nothing|password|time)\\b",
+      "name": "keyword.other.rosScript"
+    },
+    {
+      "captures": {
+        "1": {
+          "name": "storage.modifier.rosScript"
+        },
+        "2": {
+          "name": "variable.other.rosScript"
+        }
+      },
+      "match": ":(global|local|set)\\s([a-zA-Z0-9-]*)"
+    },
+    {
+      "match": "\\b(from|to|step)\\b",
+      "name": "keyword.control"
+    },
+    {
+      "match": "\\$[a-zA-Z0-9-]*",
+      "name": "variable.other.rosScript"
+    },
+    {
+      "match": "\\b(radius|routing|snmp|special-login|store|system|tool|user|certificate|driver|file|interface|ip|ipv6|log|mpls|port|queue)\\b",
+      "name": "support.function.builtin.rosScript"
+    },
+    {
+      "match": "\\b(len|setup|typeof|toarray|tobool|toid|toip|toip6|tonum|tostr|totime)\\b",
+      "name": "support.function.builtin.rosScript"
+    },
+    {
+      "match": "\\b(accept|add|beep|delay|do|drop|execute|export|find|get|import|log|parse|pick|ping|print|put|quit|redirect|redo|resolve|set|undo)\\b",
+      "name": "support.function.builtin.rosScript"
+    },
+    {
+      "match": "\\b(true|false|yes|no)\\b",
+      "name": "constant.language.boolean.rosScript"
+    },
+    {
+      "begin": "'",
+      "end": "'",
+      "name": "string.quoted.single.rosScript",
+      "patterns": [
+        {
+          "include": "#string_escaped_char",
+          "name": "constant.character.escape.rosScript"
+        }
+      ]
+    },
+    {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.rosScript",
+      "patterns": [
+        {
+          "include": "#string_escaped_char",
+          "name": "constant.character.escape.rosScript"
+        }
+      ]
+    },
+    {
+      "begin": "(^[ \\t]+)?(?=#)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.whitespace.comment.leading.rosScript"
+        }
+      },
+      "end": "(?!\\G)",
+      "patterns": [
+        {
+          "begin": "#",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.rosScript"
+            }
+          },
+          "end": "\\n",
+          "name": "comment.line.number-sign.rosScript"
+        }
+      ]
+    },
+    {
+      "match": "<\\=|>\\=|\\=\\=|<|>|\\!\\=",
+      "name": "keyword.operator.comparison"
+    },
+    {
+      "match": "\\+|\\-|\\*|\\/",
+      "name": "keyword.operator.arithmetic"
+    },
+    {
+      "comment": "Concatenates strings and arrays",
+      "match": "\\.|,",
+      "name": "keyword.operator.string"
+    },
+    {
+      "match": "\\[|\\(|\\)|\\:|\\[|\\]|\\{|\\||\\}|\\]",
+      "name": "punctuation.section"
+    },
+    {
+      "match": "=",
+      "name": "keyword.operator.assignment"
+    },
+    {
+      "match": "\\b([1-9]+[0-9]*|0)",
+      "name": "constant.numeric.integer.decimal.rosScript"
+    },
+    {
+      "include": "#other_keywords",
+      "name": "keyword.other.rosScript"
+    },
+    {
+      "match": "country|band|antenna-gain|hw-protection-mode|wireless-protocol|adaptive-noise-immunity|default-name|basic-rates-a/g|basic-rates|basic-rates-b|frequency",
+      "name": "keyword.other.rosScript"
+    },
+    {
+      "match": "\\b(debug|error|info|warning)\\b",
+      "name": "variable.parameter"
+    },
+    {
+      "match": "\\b(bgp|ip|ipsec|ipv6|ldp|ospf-v3|ppp|rip|snmp)\\b",
+      "name": "constant.other.rosScript.protocol"
+    },
+    {
+      "match": "\\b(6to4|bonding|bridge|eoip|eoipv6|ethernet|wireless|gre6|ipipv6|isdn-client|isdn-server|l2tp-client|l2tp-server|lte|mesh|ovpn-client|ovpn-server|ppp-client|pppoe-client|pppoe-server|ppp-server|pptp-client|pptp-server|sstp-client|sstp-server|traffic-eng|vlan|vpls)\\b",
+      "name": "keyword.other.rosScript"
+    },
+    {
+      "match": "\\b(new|related|established|invalid)\\b",
+      "name": "constant.other.rosScript.connection-state"
+    }
+  ],
+  "repository": {
+    "other_keywords": {
+      "patterns": [
+        {
+          "match": "\\b(fast-forward|dns|cache|aaa|accessible-via-web|accounting|account-local-traffic|ac-name|action|active-flow-timeout|active-mode|add-default-route|ageing-time|align|always-from-cache|area|area-id|arp|as|authenticate|authoritative|automatic-supout|auto-negotiation|autonomous|auto-send-supout|backup-allowed|bandwidth-server|baud-rate|bfd|bidirectional-timeout|blank-interval|bootp-support|bootp-lease-time|bridge-mode|broadcast|broadcast-addresses|cable-settings|cache-administrator|cache-entries|cache-hit-dscp|cache-max-ttl|cache-on-disk|cache-size|chain|channel|channel-time|check-interval|cipher|client|client-to-client-reflection|comment|community|config|connection-state|connection|connection-bytes|connection-idle-timeout|connection-state|console|contact|contrast|cpu|customer|data-bits|default|default-ap-tx-limit|default-client-tx-limit|default-forwarding|default-group|default-profile|default-route-distance|dhcp-options|dhcp-client|dhcp-option|dhcp-server|dh-group|dial-on-demand|directory|disabled|disable-running-check|discovery|disk-file-count|disk-file-name|disk-lines-per-file|disk-stop-on-full|display-time|distance|distribute-default|distribute-for-default-route|domain|dpd-interval|dpd-maximum-failures|dynamic-label-range|eap-methods|e-mail|enabled|enc-algorithm|enc-algorithms|encryption-password|encryption-protocol|engine-id|exchange-mode|exclude-groups|file-limit|file-name|filter|filter-port|filter-stream|firewall|firmware|flow-control|forward-delay|frame-size|frames-per-second|from|full-duplex|garbage-timer|gateway|gateway-class|gateway-keepalive|gateway-selection|generate-policy|generic-timeout|gps|graphing|group|group-ciphers|group-key-update|hardware|hash-algorithm|health|hide-ssid|hop-limit|hotspot|hotspot-address|html-directory|http-cookie-lifetime|http-proxy|icmp-timeout|identity|idle-timeout|igmp-proxy|ignore-as-path-len|inactive-flow-timeout|incoming|in-filter|instance|interface|interfaces|interim-update|interval|ipsec-protocols|irq|jump-target|keepalive-timeout|keep-max-sms|kind|l2mtu|latency-distribution-scale|lcd|lease-time|level|lifebytes|lifetime|line-count|list|local-address|local-proxy-arp|location|logging|login|login-by|log-prefix|loop-detect|lsr-id|managed-address-configuration|management-protection|management-protection-key|mangle|manual|manycast|max-cache-size|max-fresh-time|max-message-age|max-mru|max-mtu|max-sessions|max-station-count|memory-limit|memory-lines|memory-scroll|memory-stop-on-full|metric-connected|metric-default|metric-static|min-rx|mirror|mme|mode|mpls|mpls-mtu|mq-pfifo-limit|mrru|mtu|multicast|multi-cpu|multiple-channels|multiplier|my-id-user-fqdn|name|nat|nat-traversal|nd|neighbor|netmask|network|no-ping-delay|note|on-backup|only-headers|only-one|on-master|origination-interval|other-configuration|out-filter|out-interface|page|page-refresh|parent|parent-proxy|parent-proxy-port|parity|passthrough|password|path-vector-limit|peer|permissions|pfifo-limit|pfs-group|policy|pool|port|ports|preemption-mode|preferred-gateway|preferred-lifetime|prefix|priority|profile|propagate-ttl|proposal|proposal-check|proprietary-extensions|protocol|protocol-mode|proxy|query-interval|query-response-interval|queue|quick-leave|ranges|rate-limit|reachable-time|read-access|read-only|receive-all|receive-enabled|receive-errors|remember|remote|remote-address|remote-port|remote-ipv6-prefix-pool|resource|retransmit-interval|route|router-id|routing|routing-table|sa-dst-address|sa-src-address|scope|screen|script|secret|send-initial-contact|set-system-time|settings|sfq-allot|sfq-perturb|shared-users|shares|show-at-login|show-dummy-rule|signup-allowed|sip-direct-media|skin|sms|sniffer|snooper|socks|source|speed|split-user-domain|ssid|ssid-all|state-after-reboot|status-autorefresh|stop-bits|store-every|store-leases-disk|supplicant-identity|system|target|target-scope|term|test-id|threshold|timeout|timeout-timer|to-addresses|tool|topics|tracking|traffic-flow|traffic-generator|transmit-hold-count|transparent-proxy|transport-address|ttl|tunnel|type|unicast-ciphers|upgrade|upnp|users|v3-protocol|valid-lifetime|vcno|version|vrid|watch-address|watchdog|watchdog-timer|web-access|address|address-list|address-pool|addresses|addresses-per-mac|admin-mac|advertise-mac-address|auto-mac|filter-mac|mac-address|filter-mac-address|filter-mac-protocol|mac-addressmac-server|mac-winbox|advertise-dns|dns-interface|dns-name|dns-server|use-peer-dns|allow|allow-disable-external-interface|allowed-number|allow-guests|audio-max|audio-min|audio-monitor|auth|auth-algorithms|auth-method|authentication|authentication-password|authentication-protocol|authentication-types|default-authentication|bsd-syslog|syslog-facility|syslog-severity|scheduler|clock|time-zone|time-zone-name|connection-mark|new-connection-mark|new-packet-mark|new-routing-mark|routing-mark|dst-address|dst-address-list|dst-delta|dst-end|dst-port|dst-start|max-client-connections|max-connections|max-server-connections|serialize-connections|metric-ospf|metric-other-ospf|redistribute-ospf|redistribute-other-ospf|metric-rip|redistribute-rip|ripng|ntp-server|primary-ntp|secondary-ntp|use-peer-ntp|paypal-accept-pending|paypal-allowed|paypal-secure-response|primary-server|secondary-server|ra-delay|ra-interval|ra-lifetime|radius|radius-eap-accounting|radius-mac-accounting|radius-mac-authentication|radius-mac-caching|radius-mac-format|radius-mac-mode|red-avg-packet|red-burst|red-limit|red-max-threshold|red-min-threshold|redistribute-connected|redistribute-static|require-client-certificate|tls-certificate|tls-mode|verify-client-certificate|security|security-profile|security-profiles|server|servers|service|service-name|service-port|smtp-server|wins-server|src-address|src-address-list|src-port|static-algo-0|static-algo-1|static-algo-2|static-algo-3|static-sta-private-algo|static-key-0|static-key-1|static-key-2|static-key-3|static-sta-private-key|static-transmit-key|streaming-enabled|streaming-max-rate|streaming-server|switch-to-spt|switch-to-spt-bytes|switch-to-spt-interval|trap-generators|trap-target|trap-version|update-stats-interval|update-timer|use-compression|use-encryption|use-explicit-null|use-ipv6|use-mpls|use-radius|use-service-tag|use-vj-compression|wmm-support|wpa-pre-shared-key|wpa2-pre-shared-key|write-access|metric-bgp|redistribute-bgp|redistribute-other-bgp|change-tcp-mss|tcp-close-timeout|tcp-close-wait-timeout|tcp-established-timeout|tcp-fin-wait-timeout|tcp-last-ack-timeout|tcp-syn-received-timeout|tcp-syn-sent-timeout|tcp-syncookie|tcp-time-wait-timeout|allocate-udp-ports-from|max-udp-packet-size|udp-stream-timeout|udp-timeout|use-ip-firewall-for-vlan|vlan-id|filter-ip-address|filter-ip-protocol|use-ip-firewall-for-pppoe|use-ip-firewall|wds-cost-range|wds-default-bridge|wds-default-cost|wds-ignore-ssid|wds-mode|job|environment)\\b",
+          "name": "keyword.other.rosScript"
+        }
+      ]
+    },
+    "string_escaped_char": {
+      "patterns": [
+        {
+          "match": "\\\\(\\\\|[nrt$?abfv\"?]|[0-9A-F]{2})",
+          "name": "constant.character.escape.rosScript"
+        },
+        {
+          "match": "\\\\.",
+          "name": "invalid.illegal.unknown-escape.rosScript"
+        }
+      ]
+    }
+  }
+}

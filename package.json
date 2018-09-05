@@ -1,0 +1,56 @@
+{
+    "name": "mikrotik-routeros-script",
+	"displayName": "%displayName%",
+	"description": "%description%",
+    "version": "2018.8.1",
+    "publisher": "devMike",
+    "license": "MIT",
+    "preview": true,
+    "icon": "images/icon.png",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+		"Programming Languages",
+        "Snippets",
+        "Other"
+	],
+    "contributes": {
+        "languages": [{
+            "id": "rosScript",
+            "extensions": [".rsc"],
+            "aliases": [
+                "Mikrotik RouterOS Script",
+                "RouterOS Script",
+                "Mikrotik Script",
+                "Mikrotik",
+                "RouterOS", 
+                "rsc",
+                "mrosscript",
+                "ross"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rosScript",
+            "scopeName": "source.rsc",
+            "path": "./syntaxes/rosScript.tmLanguage.json"
+        }],
+    "snippets": [{
+        "language": "rosScript",
+        "path": "./snippets/rosScript.json"
+    }]
+    },
+	"__metadata": {
+		"publisherDisplayName": "Korzhov Mikhail"
+    },
+    "bugs": {
+        "url": "https://github.com/devMikeUA/vscode_mikrotik_routeros_script/issues",
+        "email": "smteamgroup@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/devMikeUA/vscode_mikrotik_routeros_script.git"
+    },
+    "homepage": "https://github.com/devMikeUA/vscode_mikrotik_routeros_script/blob/master/README.md"
+}

@@ -1,0 +1,226 @@
+{
+	":global <var> [<value>]":{
+		"prefix": ":global",
+		"body": ":global ${1:myVar} ${2|0,\"\",[],()|};$0",
+		"description": "Define global variable."
+	},
+
+	":local <var> [<value>]":{
+		"prefix": ":local",
+		"body": ":local ${1:myVar} ${2|0,\"\",[],()|};$0",
+		"description": "Define local variable."
+	},
+
+	":beep <freq> <length>":{
+		"prefix": ":beep",
+		"body": ":beep ${1:freq} ${2:length};$0",
+		"description": "Beep built in speaker."
+	},
+
+	":delay <time>":{
+		"prefix": ":delay",
+		"body": ":delay $1${2|s,m,h|};$0",
+		"description": "Do nothing for a given period of time."
+	},
+
+	":put <expression>":{
+		"prefix": ":put",
+		"body": ":put ${1|[],(),\"\"|};",
+		"description": "Put supplied argument to console."
+	},
+
+	":len <expression>":{
+		"prefix": ":len",
+		"body": ":len ${1:\"length-8\"};$0",
+		"description": "Return string length or array element count."
+	},
+
+	":typeof <var>":{
+		"prefix": ":typeof",
+		"body": ":typeof ${1:4};$0",
+		"description": "Return data type of variable."
+	},
+
+	":pick <var> <start>":{
+		"prefix": ":pick",
+		"body": ":pick ${1:\"abcde\"} ${2:1} ${3:3};\n$0",
+		"description": "Return range of elements or substring. If end position is not specified, will return only one element from an array."
+	},
+
+	":log <topic> <message>":{
+		"prefix": ":log",
+		"body": ":log ${1|debug,error,info,warning|} ${2:\"Hello from script\"};$0",
+		"description": "Write message to system log. Available topics are \"debug, error, info and warning\"."
+	},
+
+	":time <expression>":{
+		"prefix": ":time",
+		"body": ":time {$1};$0",
+		"description": "Return interval of time needed to execute command."
+	},
+
+	":set <var> [<value>]":{
+		"prefix": ":set",
+		"body": ":set ${1:a} ${2:true};$0",
+		"description": "Assign value to declared variable."
+	},
+
+	":find <arg> <arg> <start>":{
+		"prefix": ":find",
+		"body": ":find ${1:\"abc\"} ${2:\"a\"} ${3:-1};$0",
+		"description": "Return position of substring or array element."
+	},
+
+	":environment print <start>":{
+		"prefix": ":environment",
+		"body": ":environment ${1:\\$myVar};$0",
+		"description": "Print initialized variable information."
+	},
+
+	":error <output>":{
+		"prefix": ":error",
+		"body": ":error ${1:\"error message\"};$0",
+		"description": "Generate console error and stop executing the script."
+	},
+
+	":execute <expression>":{
+		"prefix": ":execute",
+		"body": ":execute {$1};$0",
+		"description": "Execute the script in background."
+	},
+
+	":parse <expression>":{
+		"prefix": ":parse",
+		"body": ":parse ${1:\":put hello!\"};$0",
+		"description": "Parse string and return parsed console commands. Can be used as function."
+	},
+
+	":resolve <arg>":{
+		"prefix": ":resolve",
+		"body": ":resolve ${1:\"www.mikrotik.com\"};$0",
+		"description": "Return IP address of given DNS name."
+	},
+
+	":toarray <var>":{
+		"prefix": ":toarray",
+		"body": ":toarray ${1:myVar};$0",
+		"description": "Convert variable to array."
+	},
+
+	":tobool <var>":{
+		"prefix": ":tobool",
+		"body": ":tobool ${1:myVar};$0",
+		"description": "Convert variable to boolean."
+	},
+
+	":toid <var>":{
+		"prefix": ":toid",
+		"body": ":toid ${1:myVar};$0",
+		"description": "Convert variable to internal ID."
+	},
+
+	":toip <var>":{
+		"prefix": ":toip",
+		"body": ":toip ${1:myVar};$0",
+		"description": "Convert variable to IP address."
+	},
+
+	":toip6 <var>":{
+		"prefix": ":toip6",
+		"body": ":toip6 ${1:myVar};$0",
+		"description": "Convert variable to IPv6 address."
+	},
+
+	":tonum <var>":{
+		"prefix": ":tonum",
+		"body": ":tonum ${1:myVar};$0",
+		"description": "Convert variable to integer."
+	},
+
+	":tostr <var>":{
+		"prefix": ":tostr",
+		"body": ":tostr ${1:myVar};$0",
+		"description": "Convert variable to string."
+	},
+
+	":totime <var>":{
+		"prefix": ":totime",
+		"body": ":totime ${1:myVar};$0",
+		"description": "Convert variable to time."
+	},
+
+	"add <param>=<value>..<param>=<value>":{
+		"prefix": "add",
+		"body": "add $1;$0",
+		"description": "Add new item."
+	},
+
+	"remove <id>":{
+		"prefix": "remove",
+		"body": "remove ${1:id};$0",
+		"description": "Remove selected item."
+	},
+
+	"enable <id>":{
+		"prefix": "enable",
+		"body": "enable ${1:id};$0",
+		"description": "Enable selected item."
+	},
+
+	"disable <id>":{
+		"prefix": "disable",
+		"body": "disable ${1:id};$0",
+		"description": "Disable selected item."
+	},
+
+	"set <id> <param>=<value>..<param>=<value>":{
+		"prefix": "set",
+		"body": "set $1;$0",
+		"description": "Change selected items parameter, more than one parameter can be specified at the time. Parameter can be unset by specifying '!' before parameter. "
+	},
+
+	"get <id> <param>=<value>..<param>=<value>":{
+		"prefix": "get",
+		"body": "get $1;$0",
+		"description": "Get selected items parameter value."
+	},
+
+	"print <param><param>=[<value>]":{
+		"prefix": "print",
+		"body": "print $1;$0",
+		"description": "Print menu items. Output depends on print parameters specified."
+	},
+
+	"export [file=<value>]":{
+		"prefix": "export",
+		"body": "export file=${1:config}${2:_}${3:$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE$CURRENT_HOUR$CURRENT_MINUTE}.rsc;$0",
+		"description": "Export configuration from current menu and its sub-menus (if present). If file parameter is specified output will be written to file with extension '.rsc', otherwise output will be printed to console."
+	},
+
+	"edit <id> <param>":{
+		"prefix": "edit",
+		"body": "edit ${1:id} ${2:param};$0",
+		"description": "Edit selected items property in built-in text editor."
+	},
+
+	"find <expression>":{
+		"prefix": "find",
+		"body": "find ${1:expression};$0",
+		"description": "Returns list of internal numbers for items that are matched by given expression. For example:  :put [/interface find name~\"ether\"]."
+	},
+
+	":if (true) do={}":{
+		"prefix": ":if",
+		"body": ":if(${1:true}) do={$0}"
+	},
+
+	":for":{
+		"prefix": ":for",
+		"body": ":for ${1:i} from=${2:1} to=${3:2} do={ $0 }"
+	},
+
+	"test":{
+		"prefix": "test",
+		"body": "${TM_SELECTED_TEXT/^.+$/• $0/g}"
+	}
+}
