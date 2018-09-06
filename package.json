@@ -2,7 +2,7 @@
     "name": "mikrotik-routeros-script",
 	"displayName": "%displayName%",
 	"description": "%description%",
-    "version": "2018.8.1",
+    "version": "2018.8.2",
     "publisher": "devMike",
     "license": "MIT",
     "preview": true,

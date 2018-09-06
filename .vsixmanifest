@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Language="en-US" Id="Mikrotik RouterOs script" Version="2018.8.1" Publisher="devMike"/>
+    <Identity Language="en-US" Id="Mikrotik RouterOs script" Version="2018.8.2" Publisher="devMike"/>
     <DisplayName>Mikrotik RouterOS script.</DisplayName>
     <Description xml:space="preserve">Provides snippets, syntax highlighting, bracket matching in Mikrotik RouterOS script files.</Description>
     <Tags>Mikrotik,RouterOS,MikrotikOS,mros,mross,mrosscript,rosscript,ros,rsc, __ext_.rsc</Tags>
