@@ -25,7 +25,7 @@
 
 	":put <expression>":{
 		"prefix": ":put",
-		"body": ":put ${1|[],(),\"\"|};",
+		"body": ":put ${1|[],(),\"\"|};$0",
 		"description": "Put supplied argument to console."
 	},
 
@@ -209,18 +209,116 @@
 		"description": "Returns list of internal numbers for items that are matched by given expression. For example:  :put [/interface find name~\"ether\"]."
 	},
 
-	":if (true) do={}":{
+	":if(<condition>) do={<commands>}":{
 		"prefix": ":if",
-		"body": ":if(${1:true}) do={$0}"
+		"body": ":if(${1:true}) do={ $0 }",
+		"description": "If a given condition is true then execute commands in the do block."
 	},
 
-	":for":{
+	":if(<condition>) do={<commands>}\nelse={<commands>} <expression>":{
+		"prefix": ":ifelse",
+		"body": ":if(${1:true}) do={\n\t$2\n} else={ $0 }",
+		"description": "If a given condition is true then execute commands in the do block, otherwise execute commands in the else block if specified."
+	},
+
+	":do { <commands> } while=( <conditions> ); :while ( <conditions> ) do={ <commands> };":{
+		"prefix": ":dowhile",
+		"body": ":do { $1 } while ($0)",
+		"description": "Execute commands until given condition is met."
+	},
+	
+	":for <var> from=<int> to=<int> step=<int> do={ <commands> }":{
 		"prefix": ":for",
-		"body": ":for ${1:i} from=${2:1} to=${3:2} do={ $0 }"
+		"body": ":for ${1:i} from=${2:1} to=${3:9} do={ $0 }",
+		"description": "Execute commands over a given number of iterations."
 	},
 
-	"test":{
-		"prefix": "test",
-		"body": "${TM_SELECTED_TEXT/^.+$/• $0/g}"
+	":foreach <var> in=<array> do={ <commands> };":{
+		"prefix": ":foreach",
+		"body": ":foreach ${1:i} in=${2:array} do={ $0 }",
+		"description": "Execute commands for each elements in list."
+	},
+
+	"append":{
+		"prefix": "append",
+		"body": "append$0"
+	},
+
+	"print as-value":{
+		"prefix": "print as-value",
+		"body": "print as-value$0",
+		"description": "Print output as array of parameters and its values."
+	},
+
+	"print brief":{
+		"prefix": "print brief",
+		"body": "print brief$0",
+		"description": "Print brief description."
+	},
+	
+	"print detail":{
+		"prefix": "print detail",
+		"body": "print detail$0",
+		"description": "Print detailed description, output is not as readable as brief output, but may be useful to view all parameters."
+	},
+
+	"print count-only":{
+		"prefix": "print count-only",
+		"body": "print count-only$0",
+		"description": "Print only count of menu items."
+	},
+
+	"print file":{
+		"prefix": "print file",
+		"body": "print file=${1:\"fileName\"}$0",
+		"description": "Print output to file."
+	},
+
+	"print follow":{
+		"prefix": "print follow",
+		"body": "print follow$0",
+		"description": "Print all current entries and track new entries until ctrl-c is pressed, very useful when viewing log entries."
+	},
+
+	"print follow-only":{
+		"prefix": "print follow-only",
+		"body": "print follow-only$0",
+		"description": "Print and track only new entries until ctrl-c is pressed, very useful when viewing log entries."
+	},
+
+	"print from":{
+		"prefix": "print from",
+		"body": "print from=${1:admin}$0",
+		"description": "Print parameters only from specified item."
+	},
+
+	"print interval":{
+		"prefix": "print interval",
+		"body": "print interval=${1:2}$0",
+		"description": "Continuously print output in selected time interval, useful to track down changes where follow is not acceptable."
+	},
+
+	"print terse":{
+		"prefix": "print terse",
+		"body": "print terse$0",
+		"description": "Show details in compact and machine friendly format."
+	},
+
+	"print value-list":{
+		"prefix": "print value-list",
+		"body": "print value-list$0",
+		"description": "Show  values one per line (good for parsing purposes)."
+	},
+
+	"print without-paging":{
+		"prefix": "print without-paging",
+		"body": "print without-paging$0",
+		"description": "If output do not fit in console screen then do not stop, print all information in one piece."
+	},
+
+	"print where":{
+		"prefix": "print where",
+		"body": "print where $0",
+		"description": "Expressions followed by where parameter can be used to filter out matched entries."
 	}
 }
