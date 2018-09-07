@@ -6,10 +6,15 @@
 - bracket matching for Mikrotik RouterOS script.
 
 ## Let's make writing scripts easier:
-- [Download source (.zip file)](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/archive/master.zip)
-- [Label issues](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/issues)
-- [Pull requests](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/pulls)
-- [Tell about in Twitter](https://www.twitter.com/home?status=%20%23rosScript%20%23RouterOSScript%20%23Mikrotik%20%23RouterOS%20%23devMike%20Let's%20make%20writing%20scripts%20easier%20%23VSMarketplace%3A%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3DdevMike.mikrotik-routeros-script) (#rosScript #RouterOSScript #Mikrotik #RouterOS #devMike)
+- [Download source (.zip file)][1]
+- [Label issues][2]
+- [Pull requests][3]
+- [Tell about in Twitter][4] (#rosScript #RouterOSScript #Mikrotik #RouterOS #devMike)
+
+[1]: https://github.com/devMikeUA/vscode_mikrotik_routeros_script/archive/master.zip{:target="_blank"}
+[2]:https://github.com/devMikeUA/vscode_mikrotik_routeros_script/issues{:target="_blank"}
+[3]:https://github.com/devMikeUA/vscode_mikrotik_routeros_script/pulls{:target="_blank"}
+[4]:https://www.twitter.com/home?status=%20%23rosScript%20%23RouterOSScript%20%23Mikrotik%20%23RouterOS%20%23devMike%20Let's%20make%20writing%20scripts%20easier%20%23VSMarketplace%3A%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3DdevMike.mikrotik-routeros-script{:target="_blank"}
 
 ## Contacts
 - [GitHub](https://github.com/devMikeUA/)
