@@ -11,10 +11,10 @@
 - [Pull requests][3]
 - [Tell about in Twitter][4] (#rosScript #RouterOSScript #Mikrotik #RouterOS #devMike)
 
-[1]: https://github.com/devMikeUA/vscode_mikrotik_routeros_script/archive/master.zip{:target="_blank"}
-[2]:https://github.com/devMikeUA/vscode_mikrotik_routeros_script/issues{:target="_blank"}
-[3]:https://github.com/devMikeUA/vscode_mikrotik_routeros_script/pulls{:target="_blank"}
-[4]:https://www.twitter.com/home?status=%20%23rosScript%20%23RouterOSScript%20%23Mikrotik%20%23RouterOS%20%23devMike%20Let's%20make%20writing%20scripts%20easier%20%23VSMarketplace%3A%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3DdevMike.mikrotik-routeros-script{:target="_blank"}
+[1]: https://github.com/devMikeUA/vscode_mikrotik_routeros_script/archive/master.zip
+[2]:https://github.com/devMikeUA/vscode_mikrotik_routeros_script/issues
+[3]:https://github.com/devMikeUA/vscode_mikrotik_routeros_script/pulls
+[4]:https://www.twitter.com/home?status=%20%23rosScript%20%23RouterOSScript%20%23Mikrotik%20%23RouterOS%20%23devMike%20Let's%20make%20writing%20scripts%20easier%20%23VSMarketplace%3A%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3DdevMike.mikrotik-routeros-script
 
 ## Contacts
 - [GitHub](https://github.com/devMikeUA/)
