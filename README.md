@@ -5,7 +5,6 @@
 [![Discord](https://img.shields.io/badge/chat-Discord-brightgreen.svg)][_3]
 [![Telegram](https://img.shields.io/badge/chat-Telegram-brightgreen.svg)][_4]
 
-
 [_1]:https://marketplace.visualstudio.com/items?itemName=devMike.mikrotik-routeros-script
 [_2]:https://gitter.im/Mikrotik-RouterOS-script/LetsTalk?utm_source=share-link&utm_medium=link&utm_campaign=share-link
 [_3]:https://discordapp.com/channels/488241725085712385/488241725635035139
@@ -15,6 +14,14 @@
 - snippets
 - syntax highlighting
 - bracket matching for Mikrotik RouterOS script.
+
+## Snippets
+
+![Snippets](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/raw/master/images/example.gif)
+
+## Syntax Highlighting
+
+![Syntax](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/raw/master/images/example.png)
 
 ## Let's make writing scripts easier:
 - [Download source (.zip file)][1]
@@ -38,25 +45,15 @@
 - ![Twitter](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/raw/master/.res/twitter_24.png) [Twitter](https://twitter.com/devMikeUA/)
 - ![Linkedin](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/raw/master/.res/linkedin_24.png) [LinkedIn](https://www.linkedin.com/in/devMikeUA/)
 
-## Snippets
-
-![Snippets](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/raw/master/images/example.gif)
-
-## Syntax Highlighting
-
-![Syntax](https://github.com/devMikeUA/vscode_mikrotik_routeros_script/raw/master/images/example.png)
-
 ## License
 
-MIT © [Korzhov Mikhail @devMikeUA](https://github.com/devMikeUA)
+MIT © [Korzhov Mikhail](https://github.com/devMikeUA)
 
 ## Release Notes
 
 ### 2018.8.2
 - Modify snippet (add new).
-
 ### 2018.8.1
 - Fix some syntax highlighting.
-
 ### 2018.8.0
 - First release.
