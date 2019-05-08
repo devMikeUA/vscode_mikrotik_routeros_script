@@ -64,7 +64,7 @@
       "name": "support.type.rosScript"
     },
     {
-      "match": "\\b(if|else|for|foreach|do|while)(?=\\s|\\{|\\=|\\[|\\()",
+      "match": "\\b(if|else|for|foreach|do|while|on-error)(?=\\s|\\{|\\=|\\[|\\()",
       "name": "keyword.control.rosScript"
     },
     {
