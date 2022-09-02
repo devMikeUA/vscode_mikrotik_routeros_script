@@ -10,6 +10,12 @@
 [_3]:https://discordapp.com/channels/488241725085712385/488241725635035139
 [_4]:https://t.me/rosscript
 
+### Support me:
+#### Hi all. I live in Ukraine and in these difficult times, you can support our project.
+
+- UAH [Donatello](https://donatello.to/devMikeUA)
+- USD EUR (PayPal) - smteamgroup@gmail.com
+
 ### Provides:
 - snippets
 - syntax highlighting
@@ -51,9 +57,16 @@ MIT © [Korzhov Mikhail](https://github.com/devMikeUA)
 
 ## Release Notes
 
+### 2022.9.2
+- Add some RouterOS 7 syntax highlighting.
+- Fix some syntax highlighting.
+To be continue ;)
+
 ### 2018.8.2
 - Modify snippet (add new).
+
 ### 2018.8.1
 - Fix some syntax highlighting.
+
 ### 2018.8.0
 - First release.

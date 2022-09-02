@@ -2,11 +2,11 @@
     "name": "mikrotik-routeros-script",
 	"displayName": "%displayName%",
 	"description": "%description%",
-    "version": "2018.8.2",
+    "version": "2022.9.2",
     "publisher": "devMike",
     "license": "MIT",
     "preview": true,
-    "icon": "images/icon.png",
+    "icon": "images/icon_ua.png",
     "engines": {
         "vscode": "^1.13.0"
     },
